@@ -1,0 +1,256 @@
+:root{
+	--dark-sky-blue: #4a90e2;
+	--brownish-grey: #676767;
+	--light-grey: #979797;
+	--black:#141414;
+	--black-two: #353535;
+
+}
+
+body{
+	background-color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	color: var(--brownish-grey);
+}
+p{
+	margin: 0;
+}
+.state{
+  width: 100%;
+  border-top: 2px solid var(--dark-sky-blue);
+  margin-bottom: 50px;
+  &_tablet_hidden{
+  	@media (width <= 1439px) {
+    display: none;
+  	}
+  }
+  &_mob_hidden{
+  	@media (width <= 767px) {
+    display: none;
+  	}
+  }
+  &_title{
+	font-size: 20px;
+	color: var(--dark-sky-blue);
+	margin: 25px auto 25px 40px;
+}
+}
+
+.container{
+	width: 81%;
+	margin: 25px auto 50px;
+  @media (width >= 320px) and (width <= 767px) {
+    width: 88%;
+  }
+  @media (width >= 768px) and (width <= 1439px) {
+    width: 93%;
+  }
+}
+.block-title{
+	&__title{
+	font-family: Montserrat;
+    font-size: 32px;
+    color: var(--black);
+    margin-bottom: 15px;
+    margin-top: 25px;
+ }
+    &__description{
+	font-size: 20px;
+	color: var(--brownish-grey);
+	line-height: 1.6;
+	width: 970px;
+	&_hidden{
+		display: none;
+	}
+	@media (width >= 320px) and (width <= 767px) {
+    display: none;
+  }
+  @media (width >= 768px) and (width <= 1439px) {
+    width: 100%;
+  }
+}
+}
+.schedule{
+	margin: 50px auto;
+	&_3{
+		width: 74%;
+		@media (width >= 320px) and (width <= 1439px) {
+    width: 100%;
+  }
+	}
+}
+.schedule-head{
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 20px;
+    &__item{
+  	  color: var(--black);
+	  font-size: 24px;
+	  &_3{
+        width: 33.33%;
+	}
+      &_4{
+        width: 25%;
+	}
+      &_5{
+		width: 20%;
+	}
+  }
+  @media (width >= 320px) and (width <= 767px) {
+    display: none;
+  } 
+}
+
+
+.schedule-row{
+	display: flex;
+	flex-wrap: nowrap;
+	border-top: solid 1px var(--light-grey);
+	margin-bottom: 30px;
+	@media (width >= 320px) and (width <= 767px) {
+    flex-wrap: wrap;
+  }
+}
+
+.schedule-day{
+	font-size: 20px;
+	line-height: 1.6;
+    font-weight: 500;
+	margin-top: 5px;
+	position: relative;
+	color: var(--black-two);
+	  &_3{
+        width: 33.33%;
+	}
+      &_4{
+        width: 25%;
+	}
+      &_5{
+		width: 20%;
+	}
+	@media (width >= 320px) and (width <= 767px) {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+.schedule-day::after{
+	content: ' ';
+	background: url('../img/arrow.svg');
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 3px;
+    right: 20px;
+    @media (width >=768px) {
+    display: none;
+  }
+}
+.active::after{
+	transform: rotate(180deg);
+}
+.schedule-tasks{
+	position: relative;
+	  &_3{
+        width: 66.67%;
+	}
+      &_4{
+        width: 75%;
+	}
+      &_5{
+		width: 80%;
+	}
+	@media (width >= 320px) and (width <= 767px) {
+    width: 100%;
+    padding-left: 40%;
+	display: none;
+
+  }
+}
+
+.schedule-block{
+	display: flex;
+	flex-wrap: nowrap;
+	margin-top: 10px;
+	&__item{
+		font-size: 16px;
+		line-height: 1.5;
+		color: var(--black-two);
+	 &_2{
+        width: 50%;
+	}
+	  &_3{
+        width: 66.67%;
+	}
+      &_4{
+        width: 75%;
+	}
+      &_5{
+		width: 80%;
+	}
+	@media (width >= 320px) and (width <= 767px) {
+	    width: 100%;
+	    font-size: 14px;
+	    line-height: 1.71;
+  }	
+	}
+	@media (width >= 320px) and (width <= 767px) {
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+}
+
+.block-button{
+	margin: 60px auto;
+	display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    @media (width >= 320px) and (width <= 767px) {
+	    flex-wrap: wrap;
+  }
+}
+.button{
+	font-size: 14px;
+	color: var(--black);
+	padding: 13px 20px 15px;
+	cursor: pointer;
+	@media (width >= 320px) and (width <= 767px) {
+	    width: 100%;
+	    margin: 25px auto;
+  }
+
+	&_secondary{
+		background-color: #fff;
+		border-radius: 5px;
+  		border: solid 1px #979797;
+  		&_hidden{
+  			display: none;
+  		}
+	}
+	&_primary{
+		background-color: var(--brownish-grey);
+		color: #fff;
+		border-radius: 5px;
+  		border: solid 1px #979797;
+  		&_margin{
+  			margin-left: 28px;
+  			@media (width >= 320px) and (width <= 767px) {
+	    		margin: 12px auto;
+  }
+  		}
+  		&_hidden{
+  			display: none;
+  		}
+	}
+	&_download{
+		background-color: #fff;
+		color: var(--black);
+		font-size: 16px;
+  		border: none;
+  		text-decoration: underline;
+  		&_hidden{
+  			display: none;
+  		}
+	}
+}
