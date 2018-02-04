@@ -22,9 +22,5 @@
     "imagemin-pngquant": "^5.0.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-nested": "^3.0.0"
-  },
-  "dependencies": {
-    "import-postcss": "^8.0.2",
-    "postcss-import": "^11.0.0"
   }
 }

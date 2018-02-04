@@ -49,7 +49,6 @@ p{
 }
 .block-title{
 	&__title{
-	font-family: Montserrat;
     font-size: 32px;
     color: var(--black);
     margin-bottom: 15px;
